@@ -1,0 +1,51 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+
+<link rel="import" href="../polymer/polymer.html">
+<!--
+Gravatar element for displaying a photo.
+
+    <gravatar-photo email=".."></gravatar-photo>
+
+@group Paper Elements
+@element gravatar-photo
+@demo demo/index.html
+-->
+<dom-module id="gravatar-photo">
+  <template>
+  <style>
+    :host {
+      display: block;
+    }
+  </style>
+    <img src$="[[url]]">
+  </template>
+</dom-module>
+<script src="build/gravatar-photo.js"></script>
+<script>
+  Polymer({
+    is: 'gravatar-photo',
+    properties: {
+      email: String,
+      size: {
+        type: Number,
+        value: 200
+      },
+      url: {
+        type: String,
+        value: ''
+      }
+    },
+    attached: function () {
+      this.url = window.gravatar.url(this.email, { s: this.size });
+    }
+  });
+</script>
