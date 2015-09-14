@@ -1,8 +1,24 @@
 {
   "name": "gravatar-photo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An element for displaying a Gravatar photo",
+  "main": "gravatar-photo.html",
+  "files": [
+    "build",
+    "gravatar-photo.html",
+    "gravatar-photo.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PolymerLabs/gravatar-photo.git"
+  },
   "author": "The Polymer Project Authors",
   "license": "BSD-3-Clause",
-  "main": "gravatar-photo.html",
+  "bugs": {
+    "url": "https://github.com/PolymerLabs/gravatar-photo/issues"
+  },
+  "homepage": "https://github.com/PolymerLabs/gravatar-photo",
   "dependencies": {
     "gravatar": "^1.3.0"
   },
