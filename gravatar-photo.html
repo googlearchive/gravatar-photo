@@ -45,7 +45,7 @@ Gravatar element for displaying a photo.
       }
     },
     attached: function () {
-      this.url = window.gravatar.url(this.email, { s: this.size });
+      this.url = window.gravatarUrl(this.email, {size: this.size});
     }
   });
 </script>
